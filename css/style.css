@@ -1,0 +1,314 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Typography*/
+/*fonts from article on Google font combinations*/
+/* @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900|Oxygen:700|Ubuntu:300,500italic,700|Josefin+Sans:400,700);
+ */
+/*Type scale
+used modular scale but rounded nubmers*/
+/*default line-height*/
+/*//COLORS
+//borrowed from https://kuler.adobe.com/InfoReady-Brand-Option-2-color-theme-3124965/edit/?copy=true
+$dark: #2C3E50;
+$medium: #D7DADB;
+$light: #FFFFFF;
+$highlight: #FC4349;
+$important: #6DBCDB;
+
+$text-color:#000;
+$link: $important;
+$link-visited: $medium;*/
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #aaa;
+}
+
+/*not visit link color*/
+a:visited {
+  color: #aaa;
+}
+
+/*visited link */
+a:hover {
+  color: #333;
+}
+
+/*on cursol color*/
+body {
+  font-size: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+header {
+  margin-bottom: 2em;
+}
+
+h1 {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1.313em;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.3;
+}
+
+p {
+  font-size: 0.875em;
+  line-height: 1.3;
+}
+
+/* ============================
+* NAVIGATION
+* Modified from: http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/a-simple-responsive-mobile-first-navigation/
+* =============================*/
+#main_nav {
+  clear: both;
+  overflow: hidden;
+}
+
+#main_nav ul {
+  list-style: none;
+}
+
+#main_nav li {
+  float: left;
+}
+
+#main_nav li a {
+  display: block;
+  color: #fff;
+  background-color: #555;
+  text-transform: uppercase;
+  padding: 0.625em 1em;
+  /* 10/16   16/16*/
+  text-decoration: none;
+  font-weight: 900;
+}
+
+#main_nav li a:hover {
+  color: #555;
+  background-color: #eee;
+}
+
+#main_nav li a:active {
+  color: #ddd;
+  background-color: #555;
+}
+
+#main_nav label {
+  color: #fff;
+  float: left;
+}
+
+#main_nav li .current {
+  color: #555;
+  background-color: #fff;
+}
+
+img, video {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/*for IE*/
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/*CLEARFIX*/
+/*http://blog.teamtreehouse.com/a-better-clearfix-with-sass*/
+/* apply a natural box layout model to all elements */
+* {
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -icab-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*This is from Chris Coyier and is a way to name your media queries*/
+/*we are sizing in ems by using math to write in numbers. for a 420px breakpoint we need to divide by 16 then multiply by 1 em to convert*/
+/*notice that px is not used for other number so*/
+/*420/16 * 1em would give you 420px in ems*/
+/*GRID HELPERS*/
+/*In my demos in class we are using padding inside of a column to create gutters. We use the same padding on the left and right side to make the gutter/
+
+you can do something differently like just use right padding but then either
+
+change the $gutter variable and $cols mixin appropriately or
+set your widths by hand for each section.*/
+/*$gutter: 10/16 * 1em;*/
+/*You pass in how many columns and the total columns and it sets the width in percent
+and it sets the gutter*/
+/*@mixin cols($num, $tot){
+	width:$num/$tot * 100%;
+	padding:0 $gutter;
+}
+*/
+/*Groval layout*/
+/*Start index page-but not only index --Grobal */
+.BR {
+  margin-bottom: 1rem;
+}
+
+.container {
+  width: 100%;
+  margin: 3em 0;
+  overflow: hidden;
+}
+
+.header-container {
+  margin-bottom: 2rem;
+}
+
+.header-container .header {
+  margin-bottom: 2rem;
+}
+
+.header-container a {
+  color: #000;
+}
+
+.header-container a a:hover {
+  color: #000;
+}
+
+.button.small {
+  color: #fff;
+}
+
+.border-left {
+  border-left: #aaa 1px solid;
+}
+
+.majorList_container {
+  margin-top: 1rem;
+}
+
+.majorList_container h3 {
+  margin-bottom: 1rem;
+}
+
+.majorList_container .majorList_main ul li a {
+  color: #222;
+}
+
+.majorList_container .majorList_main ul li a:hover {
+  color: #aaa;
+}
+
+/* side bar */
+.sidebar li .active {
+  color: #6c7aad;
+}
+
+/*Main Page*/
+h3.BR, h4.BR {
+  font-weight: bold;
+}
+
+/*Major pages*/
+.courses {
+  margin-bottom: 2rem;
+}
+
+.courses h3 {
+  margin-bottom: 1rem;
+}
+
+.courses h4 {
+  margin-bottom: 0.5rem;
+}
+
+.courses ul li a {
+  color: #000;
+}
+
+.courses ul li a:hover {
+  color: #aaa;
+}
+
+/*class pages*/
+h2.classTitle {
+  font-weight: 600;
+}
+
+label.textbox {
+  margin-top: 5rem;
+}
+
+.tabs-title {
+  display: inline-block;
+  float: none;
+}
+
+/*# sourceMappingURL=style.css.map */
